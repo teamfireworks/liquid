@@ -1,6 +1,6 @@
-local Fluid = require "./roblox_packages/Fluid"
+local types = require "@self/types"
 
-export type Read = <T>(value: Fluid.UsedAs<T>) -> T
+export type Read = types.Read
 
 return table.freeze {
 	useAtom = require "@self/useAtom",

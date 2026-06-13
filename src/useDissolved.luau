@@ -1,8 +1,7 @@
-local Fluid = require "../roblox_packages/Fluid"
+const Fluid = require "../roblox_packages/Fluid"
+const types = require "./types"
 
-export type Read = <T>(value: Fluid.UsedAs<T>) -> T
-
-local function useDissolved<T>(source: (read: Read) -> T): Fluid.UsedAs<T>
+local function useDissolved<T>(source: (read: types.Read) -> T): Fluid.UsedAs<T>
 	local isDependencyRead = false
 
 	local function mockRead(value: unknown)
