@@ -1,3 +1,7 @@
+const Fluid = require "./roblox_packages/Fluid"
+
+export type Read = <T>(value: Fluid.UsedAs<T>) -> T
+
 return table.freeze {
 	useAtom = require "@self/useAtom",
 	useCamera = require "@self/useCamera",
