@@ -1,0 +1,35 @@
+name = "teamfireworks/liquid"
+description = "An assortment of useful hooks and utilites for Fluid, a Roblox UI library."
+version = "0.1.0"
+authors = ["Team Fireworks <teamfireworks.org>"]
+repository = "https://github.com/teamfireworks/liquid"
+license = "MIT"
+
+include = ["src/**/*.luau", "roblox_packages", "pesde.toml", "LICENSE.md"]
+
+[target]
+environment = "roblox"
+lib = "src/init.luau"
+
+[indices]
+default = "https://github.com/pesde-pkg/index"
+
+[wally_indices]
+default = "https://github.com/UpliftGames/wally-index"
+
+[scripts]
+roblox_sync_config_generator = ".pesde/scripts/roblox_sync_config_generator.luau"
+sourcemap_generator = ".pesde/scripts/sourcemap_generator.luau"
+
+[dev_dependencies]
+scripts = { name = "pesde/scripts_rojo", version = "^0.2.0", target = "lune" }
+rojo = { name = "pesde/rojo", version = "^7.5.1", target = "lune" }
+
+[engines]
+pesde = "^0.7.0"
+lune = "^0.10.2"
+
+[dependencies]
+Fluid = { wally = "ffrostfall/fluid", version = "^0.6.4" }
+Ripple = { wally = "littensy/ripple", version = "^0.10.2" }
+Charm = { wally = "littensy/charm", version = "^0.11.0-rc.6" }

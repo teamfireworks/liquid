@@ -1,0 +1,72 @@
+// Folder-specific settings
+//
+// For a full list of overridable settings, and general information on folder-specific settings,
+// see the documentation: https://zed.dev/docs/configuring-zed#settings-files
+{
+	"disable_ai": true,
+	"languages": {
+		"Luau": {
+			"formatter": {
+				"external": {
+					"command": "stylua",
+					"arguments": ["-"],
+				},
+			},
+		},
+	},
+	"lsp": {
+		"json-language-server": {
+			"settings": {
+				"json": {
+					"schemas": [
+						{
+							"fileMatch": ["*.project.json"],
+							"url": "https://raw.githubusercontent.com/rojo-rbx/vscode-rojo/refs/heads/master/schemas/project.template.schema.json",
+						},
+					],
+				},
+			},
+		},
+		"luau-lsp": {
+			"settings": {
+				"roblox": {
+					"enabled": true,
+					"security_level": "plugin",
+					"download_api_documentation": true,
+					"download_definitions": true,
+				},
+				"fflags": {
+					"enable_new_solver": true,
+					"sync": true,
+				},
+				"luau-lsp": {
+					"sourcemap": {
+						"enabled": false,
+					},
+					"completion": {
+						"showPropertiesOnMethodCall": true,
+						"imports": {
+							"enabled": true,
+							"suggestServices": true,
+							"suggestRequires": true,
+							"separateGroupsWithLine": true,
+							"requireStyle": "alwaysRelative",
+							"stringRequires": {
+								"enabled": true,
+							},
+							"ignoreGlobs": ["**/.pesde/**", "**/.output/**"],
+							"useConst": true,
+						},
+					},
+					"index": {
+						"enabled": true,
+						"maxFiles": 10000,
+					},
+					"format": {
+						"convertQuotes": true,
+					},
+				},
+			},
+		},
+	},
+}
