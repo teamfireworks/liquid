@@ -1,11 +1,11 @@
 name = "teamfireworks/liquid"
 description = "An assortment of useful hooks and utilites for Fluid, a Roblox UI library."
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Team Fireworks <teamfireworks.org>"]
 repository = "https://github.com/teamfireworks/liquid"
 license = "MIT"
 
-include = ["src/**/*.luau", "roblox_packages", "pesde.toml", "LICENSE.md", "README.md"]
+includes = ["src/**/*.luau", "roblox_packages", "pesde.toml", "LICENSE.md", "README.md"]
 
 [target]
 environment = "roblox"
